@@ -1,91 +1,88 @@
 import { IconChevronDown, IconChevronUp } from '@tabler/icons-react';
 import { useState } from 'react';
+import Logo from '../assets/HDB Logo.jpg';
+
+const statuses = [
+  { label: 'Under consideration' },
+  { label: 'Planned' },
+  { label: 'In Development' },
+  { label: 'Shipped' }
+];
+
+const topics = [
+  { label: 'Welcome', count: 5 },
+  { label: 'Improvement', count: 3 },
+  { label: 'Integrations', count: 1 },
+  { label: 'Styling', count: 2 }
+];
 
 const Sidebar = () => {
   const [showStatuses, setShowStatuses] = useState(true);
   const [showTopics, setShowTopics] = useState(true);
 
   return (
-    <div className='bg-gray-100/70 p-10 h-screen overflow-y-auto'>
-      <div className='flex flex-col shrink-0'>
-        <div className='flex flex-col gap-1'>
+    <aside className='bg-gray-50 p-6 h-screen overflow-y-auto shadow-inner border-r border-gray-200 flex flex-col'>
+      <div className='mb-8 flex items-center justify-center'>
+        <img src={Logo} alt='Logo' />
+      </div>
+
+      <div className='space-y-6'>
+        <div>
           <button
-            className='flex items-center justify-between h-10 px-3 cursor-pointer'
             onClick={() => setShowStatuses(!showStatuses)}
+            className='w-full flex items-center justify-between py-2 px-4 rounded-md text-gray-700 font-medium text-lg hover:bg-gray-100 transition'
           >
-            <span className='text-gray-500 text-xl font-semibold'>
-              Statuses
-            </span>
-            <span>
-              {showStatuses ? (
-                <IconChevronDown size={18} />
-              ) : (
-                <IconChevronUp size={18} />
-              )}
-            </span>
+            <span>Statuses</span>
+            {showStatuses ? (
+              <IconChevronDown size={20} />
+            ) : (
+              <IconChevronUp size={20} />
+            )}
           </button>
-          <ul className='flex flex-col gap-1 list-none'>
-            <li>
-              <button className='w-full py-2 px-4 rounded hover:bg-gray-200 text-black/70 self-start font-semibold text-xl'>
-                Items
-              </button>
-            </li>
-            <li>
-              <button className='w-full py-2 px-4 rounded hover:bg-gray-200 text-black/70 self-start font-semibold text-xl'>
-                Items
-              </button>
-            </li>
-            <li>
-              <button className='w-full py-2 px-4 rounded hover:bg-gray-200 text-black/70 self-start font-semibold text-xl'>
-                Items
-              </button>
-            </li>
-            <li>
-              <button className='w-full py-2 px-4 rounded hover:bg-gray-200 text-black/70 self-start font-semibold text-xl'>
-                Items
-              </button>
-            </li>
-          </ul>
+
+          {showStatuses && (
+            <ul className='mt-2 space-y-1'>
+              {statuses.map((status, idx) => (
+                <li key={idx}>
+                  <button className='w-full text-left py-2 px-4 rounded-md hover:bg-gray-200 text-gray-800 font-medium transition'>
+                    {status.label}
+                  </button>
+                </li>
+              ))}
+            </ul>
+          )}
         </div>
-        <div className='flex flex-col gap-1'>
+
+        <div>
           <button
-            className='flex items-center justify-between h-10 px-3 cursor-pointer'
             onClick={() => setShowTopics(!showTopics)}
+            className='w-full flex items-center justify-between py-2 px-4 rounded-md text-gray-700 font-medium text-lg hover:bg-gray-100 transition'
           >
-            <span className='text-gray-500 text-xl font-semibold'>Topics</span>
-            <span>
-              {showTopics ? (
-                <IconChevronDown size={18} />
-              ) : (
-                <IconChevronUp size={18} />
-              )}
-            </span>
+            <span>Topics</span>
+            {showTopics ? (
+              <IconChevronDown size={20} />
+            ) : (
+              <IconChevronUp size={20} />
+            )}
           </button>
-          <ul className='flex flex-col gap-1 list-none'>
-            <li>
-              <button className='w-full py-2 px-4 rounded hover:bg-gray-200 text-black/70 self-start font-semibold text-xl'>
-                Items
-              </button>
-            </li>
-            <li>
-              <button className='w-full py-2 px-4 rounded hover:bg-gray-200 text-black/70 self-start font-semibold text-xl'>
-                Items
-              </button>
-            </li>
-            <li>
-              <button className='w-full py-2 px-4 rounded hover:bg-gray-200 text-black/70 self-start font-semibold text-xl'>
-                Items
-              </button>
-            </li>
-            <li>
-              <button className='w-full py-2 px-4 rounded hover:bg-gray-200 text-black/70 self-start font-semibold text-xl'>
-                Items
-              </button>
-            </li>
-          </ul>
+
+          {showTopics && (
+            <ul className='mt-2 space-y-1'>
+              {topics.map((topic, idx) => (
+                <li key={idx}>
+                  <button className='w-full flex justify-between items-center py-2 px-4 rounded-md hover:bg-gray-200 text-gray-800 font-medium transition'>
+                    <span>{topic.label}</span>
+                    <span className='bg-gray-300 text-sm text-gray-800 rounded-full px-2 py-0.5'>
+                      {topic.count}
+                    </span>
+                  </button>
+                </li>
+              ))}
+            </ul>
+          )}
         </div>
       </div>
-    </div>
+    </aside>
   );
 };
 
