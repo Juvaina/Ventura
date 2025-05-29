@@ -2,7 +2,7 @@
   {
     "title": "Add Dark Mode Support",
     "description": "Users often work late at night or in low-light environments. A dark mode can significantly reduce eye strain and improve user experience. It would be ideal if users could toggle dark mode on/off and have the setting persist across sessions.",
-    "count": 0,
+    "count": 10,
     "name": "Jane Doe",
     "email": "jane.doe@example.com",
     "date": "2025-05-28T14:32:00",
@@ -32,12 +32,12 @@
   {
     "title": "Custom Notifications",
     "description": "Users should have the ability to configure notifications, such as choosing which types of alerts they want to receive and setting notification quiet hours. This allows for a more personalized and less intrusive experience.",
-    "count": 5,
+    "count": 0,
     "name": "Carlos Rivera",
     "email": "carlos.rivera@example.com",
     "date": "2025-05-24T11:05:00",
     "topic": "Improvement",
-    "status": "Backlog"
+    "status": "Under Consideration"
   },
   {
     "title": "Multi-language Support",
@@ -92,11 +92,11 @@
   {
     "title": "Form Validation Bug",
     "description": "There is a bug in the form validation where the submit button stays disabled even when all fields are correctly filled out. This issue is blocking users from completing forms and needs urgent attention.",
-    "count": 9,
+    "count": 0,
     "name": "William Zhang",
     "email": "william.zhang@example.com",
     "date": "2025-05-17T15:22:00",
     "topic": "Bug Report",
-    "status": "Backlog"
+    "status": "Under Consideration"
   }
 ]

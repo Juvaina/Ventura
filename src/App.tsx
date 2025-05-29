@@ -1,4 +1,4 @@
-import FeatureCard from './components/FeatureCard';
+import FeatureRequest from './components/FeatureRequest';
 import Sidebar from './components/Sidebar';
 
 function App() {
@@ -6,7 +6,7 @@ function App() {
     <div className='grid grid-cols-[20%_80%]'>
       <Sidebar />
       <main className='max-w-7xl mx-auto'>
-        <FeatureCard />
+        <FeatureRequest />
       </main>
     </div>
   );

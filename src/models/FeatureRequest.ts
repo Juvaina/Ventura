@@ -6,5 +6,5 @@ export  interface FeatureRequest {
   email?: string;
   date: string; 
   topic: 'Improvement' | 'New feature' | 'Styling' | 'Bug Report'|string;
-  status?: string;
+  status: string;
 }

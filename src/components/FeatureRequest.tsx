@@ -2,7 +2,7 @@ import { useState } from 'react';
 import FeatureList from './FeatureList';
 import Offcanvas from './OffCanvas';
 
-const FeatureCard = () => {
+const FeatureRequests = () => {
   const [isOpen, setIsOpen] = useState<boolean>(false);
   return (
     <>
@@ -12,7 +12,7 @@ const FeatureCard = () => {
             <h1 className='text-4xl font-bold'>Feature Ideas</h1>
             <button
               onClick={() => setIsOpen(true)}
-              className='bg-pink-600 p-2 rounded-md px-2 text-white font-semibold hover:bg-pink-500 cursor-pointer'
+              className='bg-red-700 p-2 rounded-md px-4 text-white  hover:bg-red-800 cursor-pointer'
             >
               Submit Idea
             </button>
@@ -26,4 +26,4 @@ const FeatureCard = () => {
   );
 };
 
-export default FeatureCard;
+export default FeatureRequests;
