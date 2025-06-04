@@ -1,39 +1,60 @@
+import { useState } from 'react';
 import featureData from '../data/featureRequests.json';
 import type { FeatureRequest } from '../models/FeatureRequest';
 import FeatureStatus from './FeatureStatus';
+import VoteBox from './VoteBox';
 
 const getDaysAgo = (dateString: string) => {
   const date = new Date(dateString);
   const now = new Date();
   const diffInMs = now.getTime() - date.getTime();
   const days = Math.floor(diffInMs / (1000 * 60 * 60 * 24));
-
   if (days === 0) return 'Today';
   if (days === 1) return 'Yesterday';
   return `${days} days ago`;
 };
 
+const ITEMS_PER_PAGE = 5;
+
 export const FeatureList = () => {
+  const [currentPage, setCurrentPage] = useState(1);
+
+  const totalPages = Math.ceil(featureData.length / ITEMS_PER_PAGE);
+  const startIndex = (currentPage - 1) * ITEMS_PER_PAGE;
+  const paginatedFeatures = featureData.slice(
+    startIndex,
+    startIndex + ITEMS_PER_PAGE
+  );
+
+  const handlePrev = () => {
+    if (currentPage > 1) setCurrentPage((prev) => prev - 1);
+  };
+
+  const handleNext = () => {
+    if (currentPage < totalPages) setCurrentPage((prev) => prev + 1);
+  };
+
   return (
     <div className='flex flex-col gap-0.5'>
-      {featureData.map((feature: FeatureRequest, index: number) => (
-        <div className='border-gray-200 border-t p-6 hover:bg-gray-100/50 cursor-pointer'>
-          <div className='flex gap-5 pb-3' key={index}>
-            <div className='flex flex-col items-center justify-centerbox-border place-content-center border-2 p-2 rounded-xl border-gray-200 basis-[10%] hover:border-gray-400 '>
-              <span className='font-semibold text-2xl'>{feature.count}</span>
-              <span className='text-sm border-t border-gray-200'>Vote</span>
-            </div>
+      {paginatedFeatures.map((feature: FeatureRequest, index: number) => (
+        <div
+          key={index}
+          className='border-gray-200 border-t p-6 hover:bg-gray-100/50 cursor-pointer'
+        >
+          <div className='flex gap-5 pb-3'>
+            <VoteBox voteCount={feature.count} />
 
             <div className='basis-[90%] flex flex-col justify-start gap-1'>
               <div className='flex gap-3'>
                 <h2 className='font-semibold text-xl'>{feature.title}</h2>
                 <FeatureStatus status={feature.status} />
               </div>
-              <p className='text-gray-500 text-[15px] tracking-wide text-base/5.5 line-clamp-2'>
+              <p className='text-gray-500 text-sm tracking-wide line-clamp-2'>
                 {feature.description}
               </p>
             </div>
           </div>
+
           <div className='pl-26 flex justify-between'>
             <span className='text-sm text-gray-600'>#{feature.topic}</span>
             <div className='flex justify-end'>
@@ -48,6 +69,27 @@ export const FeatureList = () => {
           </div>
         </div>
       ))}
+
+      {/* Pagination Controls */}
+      <div className='flex justify-center items-center gap-4 mt-4'>
+        <button
+          onClick={handlePrev}
+          disabled={currentPage === 1}
+          className='px-4 py-2 border rounded disabled:opacity-50 cursor-pointer'
+        >
+          Prev
+        </button>
+        <span className='text-sm text-gray-700'>
+          Page {currentPage} of {totalPages}
+        </span>
+        <button
+          onClick={handleNext}
+          disabled={currentPage === totalPages}
+          className='px-4 py-2 border rounded disabled:opacity-50 cursor-pointer'
+        >
+          Next
+        </button>
+      </div>
     </div>
   );
 };

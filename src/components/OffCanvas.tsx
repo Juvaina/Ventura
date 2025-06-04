@@ -39,16 +39,16 @@ const Offcanvas: React.FC<OffcanvasProps> = ({ isOpen, onClose }) => {
         >
           <IconX size={28} />
         </button>
-        <div className='flex flex-col gap-10 w-full p-8'>
+        <div className='flex flex-col gap-4 w-full p-8'>
           <h2 className='text-2xl font-semibold'>Tell us your Idea!</h2>
           <input
             type='text'
             placeholder='Title'
-            className='border border-gray-300 p-3 rounded-xl w-full mb-4'
+            className='border border-gray-300 p-3 rounded-lg w-full mb-4'
           />
           <textarea
             placeholder='Description'
-            className='border border-gray-300 p-3 rounded-xl w-full h-40 resize-none mb-4'
+            className='border border-gray-300 p-3 rounded-lg w-full h-40 resize-none mb-4'
           />
           <div className='mb-4'>
             <p className='font-medium'>
@@ -59,9 +59,9 @@ const Offcanvas: React.FC<OffcanvasProps> = ({ isOpen, onClose }) => {
                 <span
                   key={tag}
                   onClick={() => handleTopicClick(tag)}
-                  className={`border px-3 py-1 rounded-full text-sm cursor-pointer ${
+                  className={`border px-3 py-1 rounded-sm text-sm cursor-pointer select-none ${
                     selectedTopic === tag
-                      ? 'bg-red-700 text-white'
+                      ? 'border-red-700 text-red-700'
                       : 'bg-gray-100 hover:bg-gray-200'
                   }`}
                 >
