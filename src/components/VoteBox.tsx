@@ -1,4 +1,4 @@
-import { useState } from 'react';
+import { useEffect, useState } from 'react';
 
 const VoteBox = ({ voteCount }: { voteCount: number }) => {
   const [count, setCount] = useState(voteCount);
@@ -12,6 +12,10 @@ const VoteBox = ({ voteCount }: { voteCount: number }) => {
     }
     setVote(!vote);
   };
+
+  useEffect(() => {
+    setCount(voteCount);
+  }, [voteCount]);
   return (
     <div
       onClick={handleClick}

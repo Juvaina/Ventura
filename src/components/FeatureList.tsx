@@ -1,4 +1,3 @@
-import { useState } from 'react';
 import featureData from '../data/featureRequests.json';
 import type { FeatureRequest } from '../models/FeatureRequest';
 import FeatureStatus from './FeatureStatus';
@@ -14,29 +13,10 @@ const getDaysAgo = (dateString: string) => {
   return `${days} days ago`;
 };
 
-const ITEMS_PER_PAGE = 5;
-
 export const FeatureList = () => {
-  const [currentPage, setCurrentPage] = useState(1);
-
-  const totalPages = Math.ceil(featureData.length / ITEMS_PER_PAGE);
-  const startIndex = (currentPage - 1) * ITEMS_PER_PAGE;
-  const paginatedFeatures = featureData.slice(
-    startIndex,
-    startIndex + ITEMS_PER_PAGE
-  );
-
-  const handlePrev = () => {
-    if (currentPage > 1) setCurrentPage((prev) => prev - 1);
-  };
-
-  const handleNext = () => {
-    if (currentPage < totalPages) setCurrentPage((prev) => prev + 1);
-  };
-
   return (
     <div className='flex flex-col gap-0.5'>
-      {paginatedFeatures.map((feature: FeatureRequest, index: number) => (
+      {featureData.map((feature: FeatureRequest, index: number) => (
         <div
           key={index}
           className='border-gray-200 border-t p-6 hover:bg-gray-100/50 cursor-pointer'
@@ -69,27 +49,6 @@ export const FeatureList = () => {
           </div>
         </div>
       ))}
-
-      {/* Pagination Controls */}
-      <div className='flex justify-center items-center gap-4 mt-4'>
-        <button
-          onClick={handlePrev}
-          disabled={currentPage === 1}
-          className='px-4 py-2 border rounded disabled:opacity-50 cursor-pointer'
-        >
-          Prev
-        </button>
-        <span className='text-sm text-gray-700'>
-          Page {currentPage} of {totalPages}
-        </span>
-        <button
-          onClick={handleNext}
-          disabled={currentPage === totalPages}
-          className='px-4 py-2 border rounded disabled:opacity-50 cursor-pointer'
-        >
-          Next
-        </button>
-      </div>
     </div>
   );
 };
