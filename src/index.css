@@ -1,1 +1,18 @@
 @import 'tailwindcss';
+
+.ql-toolbar{
+    border-top-left-radius: 0.5rem;
+    border-top-right-radius: 0.5rem;
+}
+
+.ql-container{
+    height:170px !important;
+    border-bottom-right-radius: 0.5rem;
+    border-bottom-left-radius: 0.5rem;
+}
+.ql-editor::before {
+  font-size: 15px;
+  color: #aaa;
+  opacity: 0.8;
+  font-style: normal !important;
+}

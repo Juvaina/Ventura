@@ -1,17 +1,17 @@
 [
   {
     "title": "Add Dark Mode Support",
-    "description": "Users often work late at night or in low-light environments. A dark mode can significantly reduce eye strain and improve user experience. It would be ideal if users could toggle dark mode on/off and have the setting persist across sessions.",
+    "description": "Users often work late at night or in low-light environments, which can cause significant eye strain when using bright interfaces. Implementing a dark mode option would allow users to switch between light and dark themes, reducing glare and improving comfort.<br /><br />Ideally, users could toggle dark mode on or off manually. Additionally, the app should remember their preference and persist this setting across sessions for a seamless experience.<br /><br />Beyond eye strain, dark mode can also help conserve battery life on OLED screens, making it more energy-efficient. Providing this feature would demonstrate attentiveness to user comfort and modern UI trends.<br /><br />Moreover, accessibility improvements for users sensitive to bright lights can increase the app’s inclusiveness.<br /><br />Implementing smooth transitions between themes and ensuring all UI elements adapt properly will be crucial for a polished experience.<br /><br />Finally, documentation and support for this feature should be provided to guide users in enabling and customizing dark mode.",
     "count": 10,
     "name": "Jane Doe",
     "email": "jane.doe@example.com",
     "date": "2025-05-28T14:32:00",
     "topic": "Styling",
-    "status": "Under Review"
+    "status": "Review"
   },
   {
     "title": "Two-Factor Authentication",
-    "description": "Security is a top priority, especially for users handling sensitive data. Adding two-factor authentication (2FA) via SMS or authentication apps would enhance security and build trust with users who expect modern safety features.",
+    "description": "Security is a top priority, especially for users handling sensitive data. Adding two-factor authentication (2FA) will enhance account protection by requiring a second verification step beyond just a password.<br /><br />This could be implemented via SMS codes, authenticator apps, or email confirmations, giving users multiple options.<br /><br />2FA significantly reduces the risk of unauthorized access even if passwords are compromised.<br /><br />The implementation should be seamless, user-friendly, and provide clear instructions for setup and recovery options.<br /><br />Moreover, the feature should support future upgrades, such as biometric or hardware key authentication.<br /><br />Ensuring compatibility with existing authentication flows and minimizing friction during login are essential.<br /><br />Logging and alerting users about unusual login attempts can complement 2FA and boost trust.<br /><br />A well-implemented 2FA can increase user confidence and meet compliance requirements for data protection.",
     "count": 4,
     "name": "John Smith",
     "email": "john.smith@example.com",
@@ -21,27 +21,27 @@
   },
   {
     "title": "Offline Mode",
-    "description": "In areas with unreliable internet, users should be able to access core features of the app. Offline mode would allow them to continue working and sync data automatically once a connection is restored.",
+    "description": "Providing offline mode allows users to access and use the app's core features without an internet connection.<br /><br />This improves usability in low or no connectivity situations and enhances overall user experience.<br /><br />The app should sync data automatically once the connection is restored.<br /><br />Conflict resolution and data consistency mechanisms are critical to avoid data loss or errors.<br /><br />Clear UI indicators should inform users about offline status and sync progress.",
     "count": 2,
     "name": "Alice Nguyen",
     "email": "alice.nguyen@example.com",
     "date": "2025-05-25T17:48:00",
     "topic": "New feature",
-    "status": "In Progress"
+    "status": "Progress"
   },
   {
     "title": "Custom Notifications",
-    "description": "Users should have the ability to configure notifications, such as choosing which types of alerts they want to receive and setting notification quiet hours. This allows for a more personalized and less intrusive experience.",
+    "description": "Custom notifications would let users personalize alerts for different events or actions within the app.<br /><br />This feature aims to increase user engagement by providing timely and relevant updates.<br /><br />Users could set preferences for notification types and delivery channels, including email, push notifications, or SMS.<br /><br />Options to mute or schedule notifications would help reduce alert fatigue.<br /><br />A user-friendly interface for managing these preferences is essential.",
     "count": 0,
     "name": "Carlos Rivera",
     "email": "carlos.rivera@example.com",
     "date": "2025-05-24T11:05:00",
     "topic": "Improvement",
-    "status": "Under Consideration"
+    "status": "On hold"
   },
   {
     "title": "Multi-language Support",
-    "description": "Expanding to a global user base requires multi-language support. Initially targeting Spanish, French, and German would cover many users. The UI text, help content, and notifications should be translatable.",
+    "description": "Expanding to a global user base requires multi-language support. Initially targeting Spanish, French, and German would cover many users.<br /><br />The UI text, help content, and notifications should be translatable.<br /><br />This includes adapting date/time formats, currency, and cultural references to ensure a localized experience.<br /><br />A strategy for continuous translation updates and community contributions may be needed.<br /><br />Proper testing for layout and display of different languages will ensure quality and usability.",
     "count": 0,
     "name": "Emma Müller",
     "email": "emma.muller@example.com",
@@ -51,7 +51,7 @@
   },
   {
     "title": "Export Data to CSV",
-    "description": "Many users need to analyze their data externally or share it with stakeholders. Providing an export-to-CSV function would be useful for reports, backups, or integrations with other tools.",
+    "description": "Many users need to analyze their data externally or share it with stakeholders.<br /><br />Providing an export-to-CSV function would be useful for reports, backups, or integrations with other tools.<br /><br />The export should include all relevant data fields, with options to filter or select specific datasets.<br /><br />CSV files should be compatible with popular spreadsheet applications.<br /><br />A simple export button with progress feedback will enhance user experience.",
     "count": 3,
     "name": "Liam O'Connor",
     "email": "liam.oconnor@example.com",
@@ -61,27 +61,27 @@
   },
   {
     "title": "Integration with Google Calendar",
-    "description": "Syncing with Google Calendar allows users to view and manage events in one place. This would streamline planning, avoid scheduling conflicts, and help teams coordinate better.",
+    "description": "Syncing with Google Calendar allows users to view and manage events in one place.<br /><br />This would streamline planning, avoid scheduling conflicts, and help teams coordinate better.<br /><br />Users should be able to authorize access securely and customize sync settings.<br /><br />Two-way sync support will keep events updated across platforms.<br /><br />Notifications and reminders synced with Google Calendar would improve timely attendance.",
     "count": 6,
     "name": "Sophia Lee",
     "email": "sophia.lee@example.com",
     "date": "2025-05-20T08:45:00",
     "topic": "New feature",
-    "status": "In Progress"
+    "status": "Progress"
   },
   {
     "title": "Bulk Edit Feature",
-    "description": "Managing large sets of data can be time-consuming. A bulk edit tool would let users select multiple items and apply changes at once—such as assigning tags, changing statuses, or deleting entries.",
+    "description": "Managing large sets of data can be time-consuming. A bulk edit tool would let users select multiple items and apply changes at once—such as assigning tags, changing statuses, or deleting entries.<br /><br />This feature will improve productivity by reducing repetitive actions and making data management more efficient.<br /><br />Users should have an intuitive interface for selecting items and applying batch updates, with confirmation dialogs to prevent accidental changes.<br /><br />Integration with existing filtering and search tools would further enhance usability.",
     "count": 1,
     "name": "Noah Johnson",
     "email": "noah.johnson@example.com",
     "date": "2025-05-19T16:30:00",
     "topic": "Improvement",
-    "status": "Under Review"
+    "status": "Review"
   },
   {
     "title": "Drag and Drop Interface",
-    "description": "A drag-and-drop interface would enhance user experience by allowing users to reorder tasks, move items between sections, or organize workflows visually without needing to use buttons or menus.",
+    "description": "A drag-and-drop interface would enhance user experience by allowing users to reorder tasks, move items between sections, or organize workflows visually without needing to use buttons or menus.<br /><br />This feature should support smooth animations and intuitive gestures to reduce user effort.<br /><br />Accessibility considerations must be made for keyboard navigation and screen readers.<br /><br />Undo functionality and confirmation prompts can prevent accidental changes.<br /><br />Integration with existing task or project management components will maximize the feature’s impact.",
     "count": 7,
     "name": "Olivia Brown",
     "email": "olivia.brown@example.com",
@@ -91,12 +91,12 @@
   },
   {
     "title": "Form Validation Bug",
-    "description": "There is a bug in the form validation where the submit button stays disabled even when all fields are correctly filled out. This issue is blocking users from completing forms and needs urgent attention.",
+    "description": "There is a bug in the form validation where the submit button stays disabled even when all fields are correctly filled out.<br /><br />This issue is blocking users from completing forms and needs urgent attention.<br /><br />A fix should include proper validation state management and thorough testing across all form types.<br /><br />Providing clear error messages or visual cues will improve usability and reduce user frustration.",
     "count": 0,
     "name": "William Zhang",
     "email": "william.zhang@example.com",
     "date": "2025-05-17T15:22:00",
     "topic": "Bug Report",
-    "status": "Under Consideration"
+    "status": "On hold"
   }
 ]

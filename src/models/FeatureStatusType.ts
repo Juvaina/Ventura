@@ -1,7 +1,7 @@
 export type FeatureStatusType =
   | 'Planned'
-  | 'Under Consideration'
+  | 'On hold'
   | 'Completed'
-  | 'Under Review'
-  | 'In Progress'
+  | 'Review'
+  | 'Progress'
   |string;
